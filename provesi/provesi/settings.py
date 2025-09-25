@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'payment',
     'experiment',
     'wms_op',
+    'producto',
 ] 
 
 MIDDLEWARE = [
