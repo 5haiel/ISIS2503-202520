@@ -143,7 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "clustercfg.redisexp1.ijrbwf.use1.cache.amazonaws.com:6379",
+        "LOCATION": "master.redistest.ijrbwf.use1.cache.amazonaws.com:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
