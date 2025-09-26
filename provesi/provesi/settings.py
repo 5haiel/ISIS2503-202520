@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7i4rz(%*e4!5mt3$&)^9z=+x91$rjmv8s9q(4*%0&aw#tpo$qd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['184.73.143.158']
 
 
 # Application definition
@@ -86,8 +86,12 @@ WSGI_APPLICATION = 'provesi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'monitoring_db',
+        'USER': 'monitoring_user',
+        'PASSWORD': 'isis2503',
+        'HOST': '172.31.27.55',
+        'PORT': '5432',
     }
 }
 
