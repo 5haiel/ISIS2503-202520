@@ -1,5 +1,5 @@
 from provesi.cache_utils import get_or_set, make_key
-from . import get_order_with_product_and_location
+from ..repositories import get_order_with_product_and_location
 
 CACHE_VERSION = 1
 CACHE_TTL = 60 * 5  # 5 minutos, cambiar si conviene
