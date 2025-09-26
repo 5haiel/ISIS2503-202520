@@ -9,4 +9,5 @@ class Orders(models.Model):
     ubicacion = models.CharField(max_length=255)
 
     def __str__(self):
-        return '%s %s' % (self.value, self.unit)
+        nombre = getattr(self.producto, "nombre", str(self.producto))
+        return f"{nombre} x {self.cantidad} @ {self.ubicacion}"

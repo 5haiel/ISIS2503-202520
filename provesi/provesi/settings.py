@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7i4rz(%*e4!5mt3$&)^9z=+x91$rjmv8s9q(4*%0&aw#tpo$qd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'payment',
     'experiment',
     'wms_op',
+    'rest_framework',
 ] 
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'provesi.experiment.diagnostics.CacheDiagnosticsMiddleware',
 ]
 
 ROOT_URLCONF = 'provesi.urls'
@@ -85,8 +87,12 @@ WSGI_APPLICATION = 'provesi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'monitoring_db',
+        'USER': 'monitoring_user',
+        'PASSWORD': 'isis2503',
+        'HOST': '172.31.27.55',
+        'PORT': '5432',
     }
 }
 
@@ -133,3 +139,19 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://master.redistest.ijrbwf.use1.cache.amazonaws.com:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+        "TIMEOUT": 60 * 5,
+    }
+}
+
+# TTL configurables
+CACHE_DEFAULT_TTL = 60 * 5
+CACHE_SHORT_TTL = 60
+CACHE_LONG_TTL = 60 * 60 * 24
