@@ -8,6 +8,6 @@ class Inventory(models.Model):
     stock = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return '%s %s' % (self.product, self.stock)
+        return '%s %s' % (self.producto, self.stock)
     
     #producto = models.ForeignKey(Producto, on_delete=models.CASCADE, default=None)
