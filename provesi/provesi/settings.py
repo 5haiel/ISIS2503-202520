@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'provesi.experiment.diagnostics.CacheDiagnosticsMiddleware',
 ]
 
 ROOT_URLCONF = 'provesi.urls'
@@ -133,3 +134,19 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+        "TIMEOUT": 60 * 5,
+    }
+}
+
+# TTL configurables
+CACHE_DEFAULT_TTL = 60 * 5
+CACHE_SHORT_TTL = 60
+CACHE_LONG_TTL = 60 * 60 * 24
