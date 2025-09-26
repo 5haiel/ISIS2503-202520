@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'locations',
+    'producto',
     'catalog',
     'inventory',
     'orders',
@@ -46,7 +47,6 @@ INSTALLED_APPS = [
     'payment',
     'experiment',
     'wms_op',
-    'producto',
 ] 
 
 MIDDLEWARE = [
