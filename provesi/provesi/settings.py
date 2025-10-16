@@ -42,7 +42,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "provesi.provesi.urls"
 
 TEMPLATES = [{
-    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    "BACKEND": "django.tmplate.backends.django.DjangoTemplates",
     "DIRS": [],
     "APP_DIRS": True,
     "OPTIONS": {
@@ -127,3 +127,6 @@ LOGGING = {
     "handlers": {"console": {"class": "logging.StreamHandler"}},
     "root": {"handlers": ["console"], "level": LOG_LEVEL},
 }
+
+if os.getenv("USE_LOC_MEM_CACHE", "false").lower() == "true":
+    CACHES = {"default": {"BACKEND": "django.core.cache.backends.locmem.LocMemCache"}}
