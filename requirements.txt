@@ -3,3 +3,6 @@ djangorestframework
 psycopg2-binary
 django-redis 
 redis
+whitenoise
+gunicorn
+psycopg2-binary
