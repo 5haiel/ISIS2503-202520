@@ -1,5 +1,5 @@
 # Imagen base ligera
-FROM python:3.12
+FROM python:3.12-slim
 
 # Variables de entorno para Django
 ENV PYTHONDONTWRITEBYTECODE=1
