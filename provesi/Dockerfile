@@ -1,5 +1,5 @@
 # Imagen base ligera
-FROM python:3.12-slim
+FROM python:3.12
 
 # Variables de entorno para Django
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -15,8 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar todo el proyecto
 COPY . /app/
 
-# Exponer el puerto 8000 (o el que uses)
+# Exponer el puerto 8080
 EXPOSE 8080
 
-# Comando de ejecución
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+# Comando para ejecutar la aplicación
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8080"]
