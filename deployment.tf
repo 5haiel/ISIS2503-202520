@@ -232,7 +232,7 @@ resource "aws_instance" "ordenes" {
               sudo pip3 install --upgrade pip --break-system-packages
               sudo pip3 install -r requirements.txt --break-system-packages
 
-              echo "===> Configuración completada ✅"
+              echo "===> Configuración completada"
 EOT
 
   tags = merge(local.common_tags, {
