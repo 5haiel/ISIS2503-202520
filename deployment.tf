@@ -210,24 +210,30 @@ resource "aws_instance" "ordenes" {
 
   user_data = <<-EOT
               #!/bin/bash
-              sudo export DATABASE_HOST=${aws_instance.database.private_ip}
-              echo "DATABASE_HOST=${aws_instance.database.private_ip}" | sudo tee -a /etc/environment
+              set -e  # detiene el script si algo falla
 
+              echo "===> Instalando dependencias base..."
               sudo apt-get update -y
               sudo apt-get install -y python3-pip git build-essential libpq-dev python3-dev
 
+              echo "===> Clonando repositorio..."
               mkdir -p /ordenes
               cd /ordenes
 
-              
-              git clone ${local.repository}
-              cd ISIS2503-202520
-              cd provesi
-              git fetch origin ${local.branch}
-              git checkout ${local.branch}
+              if [ ! -d ISIS2503-202520 ]; then
+                git clone ${local.repository}
+              fi
+
+              cd ISIS2503-202520/provesi
+              git fetch origin ${local.branch} || true
+              git checkout ${local.branch} || true
+
+              echo "===> Instalando dependencias Python..."
               sudo pip3 install --upgrade pip --break-system-packages
               sudo pip3 install -r requirements.txt --break-system-packages
-              EOT
+
+              echo "===> Configuración completada ✅"
+EOT
 
   tags = merge(local.common_tags, {
     Name = "${var.project_prefix}-ordenes-${each.key}"
