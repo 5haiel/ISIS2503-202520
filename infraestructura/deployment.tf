@@ -50,7 +50,7 @@ provider "aws" {
 locals {
   project_name = "${var.project_prefix}-circuit-breaker"
   repository   = "https://github.com/5haiel/ISIS2503-202520.git"
-  branch       = "main"
+  branch       = "Mariana"
 
   common_tags = {
     Project   = local.project_name
@@ -219,11 +219,9 @@ resource "aws_instance" "ordenes" {
               mkdir -p /ordenes
               cd /ordenes
 
-              if [ ! -d ISIS2503-MonitoringApp ]; then
-                git clone ${local.repository}
-              fi
-
-              cd ISIS2503-MonitoringApp
+              
+              git clone ${local.repository}
+              cd provesi
               git fetch origin ${local.branch}
               git checkout ${local.branch}
               sudo pip3 install --upgrade pip --break-system-packages
