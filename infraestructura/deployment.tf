@@ -221,6 +221,7 @@ resource "aws_instance" "ordenes" {
 
               
               git clone ${local.repository}
+              cd ISIS2503-202520
               cd provesi
               git fetch origin ${local.branch}
               git checkout ${local.branch}
