@@ -39,13 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'locations',
-    'catalog',
     'inventory',
     'orders',
-    'shipping',
-    'payment',
     'experiment',
-    'wms_op',
 ] 
 
 MIDDLEWARE = [
