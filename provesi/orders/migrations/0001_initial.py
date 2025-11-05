@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
     ('producto', '0001_initial'),
-    ('usuario', '0001_initial'),
+    ('user', '0001_initial'),
 ]
 
     operations = [
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('ubicacion', models.CharField(max_length=255)),
                 ('estado', models.CharField(max_length=50, default='pendiente')),
                 ('producto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='producto.producto')),
-                ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='usuario.usuario')),
+                ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='user.user')),
             ],
         ),
     ]
