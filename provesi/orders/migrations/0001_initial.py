@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('cantidad', models.PositiveIntegerField()),
                 ('ubicacion', models.CharField(max_length=255)),
                 ('producto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='producto.producto')),
-                ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='user.user')),
+                ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='usuarios.user')),
             ],
         ),
     ]
