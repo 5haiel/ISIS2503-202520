@@ -201,7 +201,7 @@ resource "aws_instance" "database" {
 # Se crean tres instancias (a, b, c) usando un bucle.
 # Cada instancia incluye un script de creación para instalar la aplicación de Provesi.
 resource "aws_instance" "ordenes" {
-  for_each = toset(["a", "b", "c"])
+  for_each = toset(["a", "b", "c", "d"])
 
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
