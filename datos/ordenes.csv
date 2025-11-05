@@ -1,0 +1,501 @@
+cantidad,ubicacion,estado,producto_id,usuario_id
+8,"Bodega 1, Estante 8",pendiente,5,44
+5,"Bodega 1, Estante 29",en proceso,9,30
+6,"Bodega 1, Estante 4",pendiente,5,50
+9,"Bodega 1, Estante 18",cancelado,9,3
+6,"Bodega 2, Estante 20",enviado,9,38
+8,"Bodega 1, Estante 12",pendiente,3,6
+1,"Bodega 3, Estante 7",enviado,7,25
+8,"Bodega 3, Estante 17",pendiente,7,18
+3,"Bodega 3, Estante 13",cancelado,2,5
+8,"Bodega 3, Estante 27",entregado,1,29
+1,"Bodega 3, Estante 3",cancelado,7,2
+9,"Bodega 1, Estante 9",enviado,7,8
+1,"Bodega 2, Estante 40",enviado,7,50
+6,"Bodega 3, Estante 23",pendiente,8,25
+8,"Bodega 3, Estante 10",pendiente,6,30
+5,"Bodega 3, Estante 8",en proceso,7,43
+7,"Bodega 3, Estante 21",cancelado,5,27
+5,"Bodega 2, Estante 38",en proceso,9,19
+6,"Bodega 1, Estante 20",entregado,6,22
+3,"Bodega 3, Estante 20",cancelado,7,7
+1,"Bodega 2, Estante 5",enviado,8,40
+10,"Bodega 3, Estante 3",pendiente,9,5
+6,"Bodega 2, Estante 34",cancelado,1,47
+5,"Bodega 1, Estante 30",cancelado,2,30
+4,"Bodega 2, Estante 24",entregado,7,40
+7,"Bodega 1, Estante 28",pendiente,7,44
+10,"Bodega 3, Estante 1",en proceso,10,21
+4,"Bodega 2, Estante 7",pendiente,7,34
+6,"Bodega 2, Estante 30",en proceso,9,4
+9,"Bodega 3, Estante 14",cancelado,5,11
+4,"Bodega 2, Estante 12",enviado,7,23
+4,"Bodega 1, Estante 23",en proceso,9,20
+1,"Bodega 3, Estante 14",cancelado,1,36
+3,"Bodega 2, Estante 39",enviado,7,20
+10,"Bodega 3, Estante 11",enviado,7,16
+5,"Bodega 1, Estante 5",en proceso,6,34
+3,"Bodega 1, Estante 22",cancelado,2,22
+7,"Bodega 2, Estante 11",entregado,4,39
+1,"Bodega 3, Estante 8",en proceso,6,35
+2,"Bodega 1, Estante 37",cancelado,9,5
+10,"Bodega 3, Estante 6",pendiente,8,4
+7,"Bodega 3, Estante 10",entregado,3,6
+9,"Bodega 2, Estante 15",pendiente,6,19
+9,"Bodega 3, Estante 39",enviado,3,40
+10,"Bodega 3, Estante 34",entregado,8,15
+1,"Bodega 1, Estante 13",entregado,9,28
+3,"Bodega 2, Estante 26",pendiente,10,32
+7,"Bodega 1, Estante 28",entregado,6,47
+1,"Bodega 2, Estante 4",entregado,3,46
+2,"Bodega 2, Estante 3",entregado,3,9
+3,"Bodega 2, Estante 32",pendiente,5,7
+4,"Bodega 1, Estante 37",enviado,6,10
+9,"Bodega 2, Estante 10",pendiente,7,8
+8,"Bodega 1, Estante 28",enviado,9,15
+4,"Bodega 3, Estante 12",en proceso,6,47
+10,"Bodega 3, Estante 27",cancelado,1,13
+2,"Bodega 1, Estante 19",cancelado,5,47
+3,"Bodega 2, Estante 10",pendiente,5,29
+7,"Bodega 3, Estante 7",entregado,6,21
+3,"Bodega 1, Estante 20",entregado,6,31
+9,"Bodega 3, Estante 11",pendiente,8,27
+10,"Bodega 1, Estante 21",enviado,10,36
+4,"Bodega 3, Estante 26",enviado,3,17
+2,"Bodega 3, Estante 36",entregado,6,11
+6,"Bodega 3, Estante 22",enviado,5,6
+7,"Bodega 2, Estante 1",en proceso,2,4
+8,"Bodega 2, Estante 16",entregado,1,9
+1,"Bodega 2, Estante 5",en proceso,8,14
+7,"Bodega 1, Estante 22",en proceso,2,48
+9,"Bodega 1, Estante 34",pendiente,3,23
+3,"Bodega 3, Estante 22",enviado,5,27
+10,"Bodega 2, Estante 36",enviado,5,10
+2,"Bodega 1, Estante 7",en proceso,10,29
+3,"Bodega 1, Estante 33",cancelado,7,12
+2,"Bodega 3, Estante 28",entregado,4,49
+4,"Bodega 3, Estante 13",en proceso,10,37
+8,"Bodega 1, Estante 3",cancelado,1,40
+1,"Bodega 3, Estante 4",en proceso,3,6
+7,"Bodega 2, Estante 18",en proceso,2,14
+1,"Bodega 1, Estante 37",cancelado,3,33
+6,"Bodega 3, Estante 30",entregado,9,5
+1,"Bodega 2, Estante 36",pendiente,5,1
+10,"Bodega 1, Estante 12",enviado,9,45
+8,"Bodega 2, Estante 25",pendiente,5,47
+10,"Bodega 2, Estante 24",enviado,7,12
+1,"Bodega 2, Estante 13",cancelado,1,36
+10,"Bodega 1, Estante 37",enviado,1,34
+4,"Bodega 3, Estante 38",cancelado,4,48
+4,"Bodega 2, Estante 39",cancelado,10,34
+7,"Bodega 1, Estante 6",cancelado,9,49
+7,"Bodega 2, Estante 26",cancelado,5,23
+10,"Bodega 3, Estante 9",cancelado,7,43
+6,"Bodega 1, Estante 16",entregado,9,16
+2,"Bodega 1, Estante 2",enviado,6,15
+2,"Bodega 2, Estante 3",pendiente,4,19
+1,"Bodega 2, Estante 22",enviado,1,42
+8,"Bodega 1, Estante 33",entregado,4,1
+5,"Bodega 3, Estante 39",entregado,3,23
+9,"Bodega 1, Estante 30",enviado,1,10
+2,"Bodega 1, Estante 12",entregado,7,14
+8,"Bodega 2, Estante 21",enviado,6,31
+2,"Bodega 3, Estante 30",pendiente,3,24
+9,"Bodega 1, Estante 18",entregado,8,35
+3,"Bodega 2, Estante 21",entregado,3,28
+8,"Bodega 3, Estante 11",pendiente,8,46
+5,"Bodega 3, Estante 28",entregado,3,40
+9,"Bodega 2, Estante 28",cancelado,9,7
+5,"Bodega 1, Estante 20",en proceso,2,26
+7,"Bodega 2, Estante 32",cancelado,3,15
+3,"Bodega 3, Estante 1",en proceso,6,39
+7,"Bodega 3, Estante 31",enviado,3,24
+5,"Bodega 2, Estante 21",en proceso,9,16
+5,"Bodega 1, Estante 8",cancelado,10,25
+6,"Bodega 2, Estante 1",pendiente,2,13
+5,"Bodega 3, Estante 36",cancelado,5,31
+8,"Bodega 1, Estante 12",cancelado,1,8
+6,"Bodega 1, Estante 6",cancelado,8,23
+9,"Bodega 3, Estante 5",entregado,10,18
+10,"Bodega 3, Estante 15",entregado,3,31
+8,"Bodega 3, Estante 7",entregado,10,41
+4,"Bodega 1, Estante 31",entregado,8,41
+4,"Bodega 3, Estante 35",entregado,4,26
+3,"Bodega 2, Estante 5",entregado,2,22
+3,"Bodega 2, Estante 26",entregado,5,6
+4,"Bodega 1, Estante 40",entregado,8,4
+5,"Bodega 3, Estante 31",pendiente,9,14
+7,"Bodega 1, Estante 18",enviado,4,40
+8,"Bodega 2, Estante 24",pendiente,7,12
+5,"Bodega 2, Estante 10",en proceso,4,9
+3,"Bodega 1, Estante 13",enviado,6,43
+7,"Bodega 2, Estante 20",cancelado,8,10
+4,"Bodega 3, Estante 20",entregado,2,23
+9,"Bodega 2, Estante 25",cancelado,3,42
+4,"Bodega 3, Estante 12",enviado,1,30
+5,"Bodega 2, Estante 31",en proceso,3,25
+1,"Bodega 1, Estante 25",pendiente,8,37
+2,"Bodega 2, Estante 38",enviado,6,50
+2,"Bodega 3, Estante 38",pendiente,5,33
+8,"Bodega 3, Estante 35",cancelado,8,46
+3,"Bodega 2, Estante 7",pendiente,5,38
+5,"Bodega 3, Estante 1",enviado,8,42
+3,"Bodega 1, Estante 21",cancelado,4,5
+1,"Bodega 1, Estante 25",pendiente,6,22
+4,"Bodega 2, Estante 14",entregado,9,50
+5,"Bodega 2, Estante 40",cancelado,6,21
+4,"Bodega 2, Estante 19",pendiente,10,40
+7,"Bodega 1, Estante 24",pendiente,8,45
+10,"Bodega 2, Estante 15",enviado,10,24
+2,"Bodega 1, Estante 6",en proceso,2,36
+3,"Bodega 3, Estante 2",enviado,3,42
+5,"Bodega 2, Estante 20",enviado,9,19
+10,"Bodega 2, Estante 29",cancelado,9,32
+2,"Bodega 2, Estante 31",pendiente,7,48
+8,"Bodega 3, Estante 35",cancelado,9,32
+8,"Bodega 2, Estante 2",enviado,4,3
+5,"Bodega 1, Estante 13",pendiente,8,44
+9,"Bodega 2, Estante 6",pendiente,7,36
+6,"Bodega 1, Estante 33",pendiente,5,30
+9,"Bodega 2, Estante 9",pendiente,10,46
+9,"Bodega 2, Estante 5",enviado,6,6
+8,"Bodega 1, Estante 30",pendiente,8,32
+5,"Bodega 3, Estante 7",cancelado,4,29
+4,"Bodega 3, Estante 1",entregado,2,34
+4,"Bodega 2, Estante 35",entregado,6,3
+6,"Bodega 1, Estante 36",enviado,3,9
+10,"Bodega 1, Estante 24",cancelado,3,21
+5,"Bodega 1, Estante 21",enviado,8,40
+10,"Bodega 3, Estante 2",enviado,6,17
+6,"Bodega 3, Estante 17",en proceso,5,18
+5,"Bodega 1, Estante 11",enviado,5,2
+4,"Bodega 2, Estante 37",enviado,3,17
+6,"Bodega 2, Estante 40",en proceso,1,26
+1,"Bodega 3, Estante 37",en proceso,4,1
+4,"Bodega 3, Estante 33",cancelado,3,5
+3,"Bodega 3, Estante 38",entregado,9,21
+8,"Bodega 1, Estante 21",entregado,5,27
+9,"Bodega 1, Estante 8",entregado,7,44
+3,"Bodega 3, Estante 13",pendiente,8,40
+5,"Bodega 1, Estante 9",en proceso,4,40
+5,"Bodega 2, Estante 34",pendiente,1,13
+2,"Bodega 1, Estante 36",cancelado,1,37
+2,"Bodega 3, Estante 19",entregado,10,2
+5,"Bodega 3, Estante 32",pendiente,10,28
+6,"Bodega 1, Estante 10",en proceso,8,3
+5,"Bodega 3, Estante 1",pendiente,9,37
+8,"Bodega 1, Estante 13",enviado,6,40
+2,"Bodega 3, Estante 21",entregado,1,41
+3,"Bodega 1, Estante 40",enviado,1,1
+6,"Bodega 2, Estante 1",cancelado,1,1
+9,"Bodega 2, Estante 10",en proceso,10,50
+8,"Bodega 2, Estante 37",entregado,5,38
+3,"Bodega 1, Estante 32",enviado,9,38
+5,"Bodega 3, Estante 11",enviado,6,50
+4,"Bodega 3, Estante 37",en proceso,3,20
+1,"Bodega 1, Estante 14",pendiente,4,7
+8,"Bodega 2, Estante 25",entregado,3,38
+3,"Bodega 1, Estante 19",pendiente,8,42
+4,"Bodega 2, Estante 32",enviado,5,46
+3,"Bodega 1, Estante 4",entregado,7,8
+4,"Bodega 2, Estante 12",en proceso,8,5
+8,"Bodega 1, Estante 36",entregado,3,7
+2,"Bodega 1, Estante 1",cancelado,1,38
+3,"Bodega 3, Estante 40",entregado,10,24
+6,"Bodega 3, Estante 31",en proceso,1,19
+6,"Bodega 1, Estante 2",en proceso,2,7
+2,"Bodega 1, Estante 12",enviado,2,2
+3,"Bodega 2, Estante 16",cancelado,8,44
+2,"Bodega 3, Estante 3",en proceso,4,33
+5,"Bodega 2, Estante 4",en proceso,5,42
+7,"Bodega 2, Estante 1",entregado,1,27
+9,"Bodega 3, Estante 10",cancelado,3,21
+10,"Bodega 3, Estante 5",cancelado,3,3
+5,"Bodega 1, Estante 17",entregado,4,8
+2,"Bodega 3, Estante 3",enviado,4,13
+9,"Bodega 1, Estante 19",en proceso,3,3
+3,"Bodega 2, Estante 28",pendiente,3,26
+10,"Bodega 1, Estante 40",pendiente,8,29
+4,"Bodega 2, Estante 3",pendiente,3,6
+7,"Bodega 3, Estante 28",cancelado,7,43
+6,"Bodega 1, Estante 32",entregado,1,8
+8,"Bodega 2, Estante 14",enviado,9,18
+4,"Bodega 3, Estante 25",pendiente,6,34
+6,"Bodega 3, Estante 22",entregado,1,3
+10,"Bodega 1, Estante 31",entregado,9,49
+9,"Bodega 2, Estante 34",entregado,6,12
+3,"Bodega 1, Estante 14",cancelado,10,17
+9,"Bodega 2, Estante 20",entregado,5,5
+8,"Bodega 2, Estante 39",enviado,6,37
+8,"Bodega 2, Estante 2",enviado,3,18
+6,"Bodega 3, Estante 27",cancelado,4,14
+7,"Bodega 1, Estante 27",entregado,9,34
+5,"Bodega 2, Estante 10",entregado,2,40
+1,"Bodega 1, Estante 10",entregado,9,20
+4,"Bodega 3, Estante 13",entregado,7,6
+6,"Bodega 3, Estante 30",entregado,7,49
+3,"Bodega 2, Estante 6",cancelado,3,43
+2,"Bodega 3, Estante 40",pendiente,4,30
+9,"Bodega 2, Estante 35",enviado,2,50
+8,"Bodega 1, Estante 12",entregado,1,20
+2,"Bodega 3, Estante 28",cancelado,8,33
+7,"Bodega 3, Estante 14",cancelado,9,41
+5,"Bodega 1, Estante 18",enviado,9,23
+9,"Bodega 1, Estante 32",pendiente,2,5
+8,"Bodega 2, Estante 29",pendiente,10,19
+6,"Bodega 3, Estante 28",en proceso,6,38
+9,"Bodega 1, Estante 37",pendiente,8,45
+10,"Bodega 2, Estante 26",en proceso,6,22
+7,"Bodega 3, Estante 17",entregado,7,33
+1,"Bodega 2, Estante 15",enviado,9,27
+4,"Bodega 2, Estante 21",entregado,7,9
+9,"Bodega 1, Estante 30",cancelado,7,7
+3,"Bodega 2, Estante 36",pendiente,4,44
+3,"Bodega 3, Estante 36",pendiente,1,29
+1,"Bodega 1, Estante 18",cancelado,3,47
+3,"Bodega 2, Estante 19",en proceso,6,6
+9,"Bodega 2, Estante 2",cancelado,10,9
+5,"Bodega 3, Estante 21",pendiente,9,42
+4,"Bodega 1, Estante 33",pendiente,9,47
+8,"Bodega 2, Estante 24",entregado,10,20
+3,"Bodega 1, Estante 32",enviado,7,36
+4,"Bodega 3, Estante 37",entregado,8,26
+10,"Bodega 2, Estante 8",entregado,1,34
+8,"Bodega 1, Estante 4",pendiente,5,15
+2,"Bodega 1, Estante 14",pendiente,6,45
+5,"Bodega 3, Estante 32",entregado,7,20
+9,"Bodega 1, Estante 13",enviado,7,18
+9,"Bodega 2, Estante 3",cancelado,1,17
+10,"Bodega 3, Estante 26",enviado,7,37
+2,"Bodega 2, Estante 12",entregado,10,26
+9,"Bodega 2, Estante 28",pendiente,8,12
+5,"Bodega 3, Estante 25",en proceso,10,27
+10,"Bodega 3, Estante 31",cancelado,8,47
+9,"Bodega 1, Estante 7",en proceso,7,26
+8,"Bodega 1, Estante 12",pendiente,3,4
+1,"Bodega 1, Estante 13",cancelado,3,46
+4,"Bodega 1, Estante 16",entregado,3,16
+4,"Bodega 3, Estante 33",enviado,8,25
+4,"Bodega 3, Estante 20",en proceso,1,9
+1,"Bodega 2, Estante 9",en proceso,4,37
+5,"Bodega 1, Estante 4",pendiente,9,25
+10,"Bodega 3, Estante 39",entregado,5,23
+6,"Bodega 2, Estante 29",cancelado,4,46
+8,"Bodega 2, Estante 40",cancelado,5,5
+2,"Bodega 1, Estante 16",cancelado,1,14
+4,"Bodega 1, Estante 22",en proceso,5,10
+10,"Bodega 3, Estante 15",enviado,3,19
+8,"Bodega 3, Estante 22",pendiente,9,7
+4,"Bodega 2, Estante 40",cancelado,7,36
+10,"Bodega 3, Estante 7",en proceso,1,6
+2,"Bodega 1, Estante 34",enviado,10,20
+2,"Bodega 3, Estante 34",cancelado,2,15
+3,"Bodega 2, Estante 40",enviado,8,40
+8,"Bodega 1, Estante 8",pendiente,7,25
+2,"Bodega 1, Estante 1",enviado,9,17
+6,"Bodega 3, Estante 20",cancelado,10,15
+3,"Bodega 1, Estante 34",en proceso,8,28
+9,"Bodega 1, Estante 37",enviado,4,40
+4,"Bodega 2, Estante 37",en proceso,10,37
+2,"Bodega 1, Estante 21",enviado,1,36
+2,"Bodega 1, Estante 30",pendiente,2,27
+4,"Bodega 3, Estante 12",entregado,5,45
+3,"Bodega 2, Estante 18",enviado,3,25
+6,"Bodega 1, Estante 23",pendiente,2,25
+7,"Bodega 2, Estante 31",enviado,8,40
+6,"Bodega 1, Estante 5",pendiente,1,41
+2,"Bodega 2, Estante 38",pendiente,6,31
+2,"Bodega 2, Estante 28",cancelado,6,38
+10,"Bodega 3, Estante 13",enviado,1,16
+2,"Bodega 3, Estante 30",en proceso,8,7
+8,"Bodega 2, Estante 29",pendiente,9,40
+10,"Bodega 1, Estante 11",en proceso,2,33
+4,"Bodega 1, Estante 2",entregado,4,21
+6,"Bodega 2, Estante 20",en proceso,10,38
+8,"Bodega 2, Estante 14",cancelado,1,8
+9,"Bodega 1, Estante 14",cancelado,7,13
+5,"Bodega 1, Estante 30",enviado,8,27
+1,"Bodega 2, Estante 17",en proceso,10,26
+7,"Bodega 1, Estante 21",en proceso,7,22
+3,"Bodega 3, Estante 5",cancelado,8,17
+6,"Bodega 2, Estante 35",pendiente,9,33
+1,"Bodega 3, Estante 35",pendiente,3,26
+6,"Bodega 2, Estante 19",enviado,5,31
+1,"Bodega 3, Estante 21",pendiente,6,42
+6,"Bodega 1, Estante 2",cancelado,2,33
+9,"Bodega 3, Estante 34",entregado,4,24
+2,"Bodega 1, Estante 31",cancelado,1,22
+3,"Bodega 2, Estante 7",pendiente,2,16
+9,"Bodega 1, Estante 26",cancelado,1,34
+9,"Bodega 3, Estante 15",en proceso,5,29
+6,"Bodega 2, Estante 31",pendiente,1,11
+7,"Bodega 1, Estante 14",pendiente,3,16
+7,"Bodega 3, Estante 7",pendiente,6,42
+8,"Bodega 2, Estante 10",en proceso,2,22
+8,"Bodega 2, Estante 34",pendiente,10,8
+5,"Bodega 2, Estante 24",pendiente,6,26
+10,"Bodega 1, Estante 24",en proceso,6,49
+3,"Bodega 2, Estante 37",enviado,9,32
+10,"Bodega 3, Estante 25",entregado,9,2
+3,"Bodega 2, Estante 26",enviado,5,35
+8,"Bodega 2, Estante 34",cancelado,5,17
+7,"Bodega 1, Estante 38",en proceso,3,11
+7,"Bodega 2, Estante 18",enviado,1,37
+7,"Bodega 3, Estante 24",pendiente,8,49
+4,"Bodega 3, Estante 12",enviado,1,49
+9,"Bodega 2, Estante 2",pendiente,7,28
+2,"Bodega 2, Estante 15",cancelado,3,8
+5,"Bodega 1, Estante 29",entregado,4,13
+3,"Bodega 1, Estante 40",enviado,10,28
+5,"Bodega 2, Estante 31",enviado,1,5
+7,"Bodega 2, Estante 3",en proceso,2,43
+10,"Bodega 2, Estante 39",cancelado,9,7
+9,"Bodega 3, Estante 23",enviado,5,24
+5,"Bodega 1, Estante 32",pendiente,10,50
+10,"Bodega 2, Estante 22",cancelado,3,33
+5,"Bodega 2, Estante 4",en proceso,8,30
+3,"Bodega 1, Estante 20",entregado,9,23
+4,"Bodega 2, Estante 34",cancelado,2,14
+6,"Bodega 1, Estante 6",cancelado,9,19
+2,"Bodega 1, Estante 2",pendiente,10,34
+7,"Bodega 1, Estante 3",entregado,8,31
+2,"Bodega 3, Estante 16",en proceso,1,25
+5,"Bodega 3, Estante 39",pendiente,1,47
+9,"Bodega 1, Estante 24",entregado,4,47
+10,"Bodega 1, Estante 31",enviado,8,29
+3,"Bodega 3, Estante 1",pendiente,10,32
+10,"Bodega 1, Estante 25",enviado,4,6
+1,"Bodega 2, Estante 39",cancelado,3,6
+7,"Bodega 3, Estante 14",en proceso,7,30
+4,"Bodega 2, Estante 26",en proceso,4,20
+9,"Bodega 3, Estante 7",cancelado,2,5
+6,"Bodega 1, Estante 3",cancelado,4,15
+7,"Bodega 1, Estante 1",cancelado,7,24
+6,"Bodega 1, Estante 36",entregado,5,27
+4,"Bodega 1, Estante 7",en proceso,3,8
+4,"Bodega 2, Estante 25",cancelado,5,3
+9,"Bodega 1, Estante 21",enviado,2,28
+2,"Bodega 2, Estante 14",en proceso,10,10
+10,"Bodega 2, Estante 24",enviado,6,2
+9,"Bodega 1, Estante 11",entregado,8,50
+2,"Bodega 2, Estante 30",pendiente,8,41
+1,"Bodega 1, Estante 32",pendiente,8,27
+3,"Bodega 2, Estante 27",cancelado,6,30
+10,"Bodega 1, Estante 33",cancelado,10,10
+7,"Bodega 1, Estante 28",en proceso,8,43
+10,"Bodega 1, Estante 29",enviado,9,39
+1,"Bodega 1, Estante 37",en proceso,4,5
+7,"Bodega 3, Estante 40",en proceso,5,38
+3,"Bodega 3, Estante 12",enviado,9,19
+5,"Bodega 3, Estante 5",entregado,9,24
+2,"Bodega 1, Estante 15",en proceso,6,9
+2,"Bodega 1, Estante 36",pendiente,8,10
+4,"Bodega 2, Estante 6",pendiente,7,26
+7,"Bodega 3, Estante 7",en proceso,4,24
+7,"Bodega 2, Estante 4",en proceso,10,21
+6,"Bodega 2, Estante 17",pendiente,10,19
+9,"Bodega 2, Estante 33",enviado,1,35
+1,"Bodega 3, Estante 27",pendiente,1,6
+5,"Bodega 3, Estante 33",enviado,3,24
+9,"Bodega 3, Estante 26",entregado,3,35
+5,"Bodega 3, Estante 30",enviado,4,31
+3,"Bodega 2, Estante 22",entregado,1,26
+8,"Bodega 2, Estante 1",entregado,4,13
+3,"Bodega 1, Estante 18",cancelado,4,1
+2,"Bodega 1, Estante 7",entregado,6,12
+10,"Bodega 2, Estante 3",entregado,5,4
+1,"Bodega 2, Estante 3",pendiente,8,11
+5,"Bodega 1, Estante 13",en proceso,1,28
+1,"Bodega 2, Estante 28",pendiente,6,11
+3,"Bodega 3, Estante 19",cancelado,6,22
+1,"Bodega 3, Estante 14",enviado,3,2
+3,"Bodega 1, Estante 1",entregado,10,30
+10,"Bodega 3, Estante 20",entregado,1,19
+10,"Bodega 2, Estante 12",cancelado,10,45
+9,"Bodega 3, Estante 15",pendiente,6,13
+6,"Bodega 1, Estante 1",enviado,5,38
+5,"Bodega 1, Estante 15",enviado,1,5
+1,"Bodega 1, Estante 38",pendiente,3,46
+6,"Bodega 2, Estante 7",entregado,1,24
+7,"Bodega 3, Estante 3",enviado,2,1
+6,"Bodega 3, Estante 36",pendiente,5,37
+1,"Bodega 3, Estante 2",en proceso,3,38
+5,"Bodega 1, Estante 38",entregado,6,16
+9,"Bodega 1, Estante 22",enviado,4,8
+8,"Bodega 1, Estante 36",cancelado,3,14
+9,"Bodega 2, Estante 31",pendiente,6,28
+1,"Bodega 1, Estante 7",enviado,1,49
+2,"Bodega 3, Estante 28",pendiente,3,6
+4,"Bodega 3, Estante 18",en proceso,4,3
+3,"Bodega 2, Estante 18",enviado,1,37
+9,"Bodega 3, Estante 9",cancelado,2,49
+4,"Bodega 2, Estante 37",entregado,4,5
+10,"Bodega 1, Estante 29",pendiente,2,1
+1,"Bodega 3, Estante 31",en proceso,6,1
+5,"Bodega 3, Estante 12",enviado,2,7
+8,"Bodega 2, Estante 37",en proceso,9,38
+10,"Bodega 3, Estante 25",cancelado,10,31
+5,"Bodega 1, Estante 7",cancelado,7,35
+10,"Bodega 2, Estante 37",pendiente,9,15
+4,"Bodega 1, Estante 17",en proceso,3,42
+1,"Bodega 2, Estante 13",entregado,10,23
+3,"Bodega 2, Estante 24",cancelado,9,46
+9,"Bodega 3, Estante 23",pendiente,9,38
+5,"Bodega 1, Estante 40",entregado,6,25
+9,"Bodega 3, Estante 10",en proceso,7,13
+8,"Bodega 3, Estante 7",entregado,7,6
+3,"Bodega 2, Estante 3",entregado,3,50
+9,"Bodega 3, Estante 28",enviado,1,4
+3,"Bodega 3, Estante 26",pendiente,8,15
+4,"Bodega 1, Estante 5",enviado,8,2
+6,"Bodega 1, Estante 35",cancelado,3,12
+4,"Bodega 1, Estante 1",cancelado,6,33
+8,"Bodega 3, Estante 25",enviado,1,3
+8,"Bodega 1, Estante 34",enviado,10,25
+9,"Bodega 2, Estante 4",cancelado,4,13
+1,"Bodega 1, Estante 15",en proceso,4,6
+4,"Bodega 2, Estante 13",enviado,8,4
+10,"Bodega 3, Estante 20",pendiente,4,2
+4,"Bodega 3, Estante 7",entregado,2,13
+3,"Bodega 1, Estante 6",enviado,2,20
+4,"Bodega 2, Estante 10",cancelado,2,1
+1,"Bodega 1, Estante 1",cancelado,3,45
+10,"Bodega 3, Estante 27",pendiente,5,13
+10,"Bodega 1, Estante 9",pendiente,1,29
+3,"Bodega 2, Estante 12",pendiente,4,1
+8,"Bodega 2, Estante 33",enviado,10,33
+10,"Bodega 2, Estante 32",en proceso,7,33
+4,"Bodega 2, Estante 18",en proceso,9,30
+9,"Bodega 1, Estante 5",cancelado,10,29
+3,"Bodega 3, Estante 39",en proceso,10,26
+7,"Bodega 1, Estante 40",enviado,8,32
+3,"Bodega 2, Estante 3",enviado,5,12
+3,"Bodega 3, Estante 13",entregado,3,4
+5,"Bodega 3, Estante 15",en proceso,7,45
+4,"Bodega 1, Estante 25",en proceso,5,23
+3,"Bodega 3, Estante 5",entregado,2,26
+4,"Bodega 2, Estante 15",entregado,5,13
+10,"Bodega 2, Estante 26",entregado,9,30
+2,"Bodega 1, Estante 27",entregado,9,8
+3,"Bodega 3, Estante 9",en proceso,9,25
+6,"Bodega 2, Estante 28",en proceso,8,31
+3,"Bodega 2, Estante 37",enviado,5,43
+7,"Bodega 3, Estante 13",pendiente,10,4
+9,"Bodega 3, Estante 32",enviado,5,38
+10,"Bodega 1, Estante 24",en proceso,5,39
+3,"Bodega 2, Estante 31",entregado,10,39
+1,"Bodega 1, Estante 30",cancelado,9,5
+6,"Bodega 1, Estante 16",enviado,9,45
+4,"Bodega 1, Estante 30",enviado,2,34
+10,"Bodega 2, Estante 5",entregado,6,47
+4,"Bodega 3, Estante 33",pendiente,3,6
+10,"Bodega 1, Estante 15",en proceso,6,4
+5,"Bodega 1, Estante 23",entregado,8,47
+4,"Bodega 3, Estante 19",en proceso,4,22
+9,"Bodega 3, Estante 24",cancelado,3,19
+1,"Bodega 1, Estante 27",entregado,7,41
+1,"Bodega 3, Estante 14",enviado,6,30
+9,"Bodega 2, Estante 4",cancelado,5,11
+9,"Bodega 1, Estante 2",entregado,1,3
+7,"Bodega 3, Estante 36",enviado,8,37
+10,"Bodega 1, Estante 5",enviado,4,27
