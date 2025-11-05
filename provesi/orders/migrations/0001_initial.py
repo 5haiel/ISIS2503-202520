@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('ubicacion', models.CharField(max_length=255)),
                 ('estado', models.CharField(max_length=50, default='pendiente')),
                 ('producto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='producto.producto')),
-                ('usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='users.users')),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='users.users')),
             ],
         ),
     ]
