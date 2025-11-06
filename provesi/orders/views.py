@@ -1,18 +1,30 @@
-from django.shortcuts import render
-from django.http import JsonResponse, Http404
-from .repositories import get_order_with_product_and_location
-from rest_framework import generics
+# orders/views.py
+from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
 from .models import Orders
-from .serializers import OrdersSerializer
-# Create your views here.
+# from .models import Orders  # ajusta el import a tu modelo real
 
-class OrdersListView(generics.ListAPIView):
-    queryset = Orders.objects.all()
-    serializer_class = OrdersSerializer
+def order_detail_view(request, id: int):
+    o = get_object_or_404(
+        Orders.objects.select_related('producto', 'usuario'),
+        pk=id
+    )
 
-
-def order_detail_view(request, id):
-    data = get_order_with_product_and_location(id)
-    if not data:
-        raise Http404("Order not found")
-    return JsonResponse(data, safe=False)
+    # Si quieres devolver JSON simple:
+    payload = {
+        "id": o.pk,
+        "cantidad": getattr(o, "cantidad", None),
+        "ubicacion": getattr(o, "ubicacion", None),
+        "producto": None if o.producto is None else {
+            "id": getattr(o.producto, "pk", None),
+            "nombre": getattr(o.producto, "nombre", None),
+            "sku": getattr(o.producto, "sku", None),
+        },
+        "usuario": None if o.usuario is None else {
+            "id": getattr(o.usuario, "pk", None),
+            "nombre": getattr(o.usuario, "nombre", None),
+            "correo": getattr(o.usuario, "correo", None),
+            "direccion_entrega": getattr(o.usuario, "direccion_entrega", None),
+        },
+    }
+    return JsonResponse(payload, status=200)
