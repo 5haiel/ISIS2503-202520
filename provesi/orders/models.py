@@ -11,3 +11,6 @@ class Orders(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name="orders")
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="orders")
 
+class Meta:
+        db_table = 'ordenes'
+        managed  = False   
