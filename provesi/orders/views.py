@@ -13,7 +13,7 @@ class OrdersListView(generics.ListAPIView):
 
 def order_detail_view(request, id: int):
     try:
-        o = Orders.objects.select_related('producto','usuario').get(pk=id)
+        o = Orders.objects.get_order_with_product_and_location('producto','usuario').get(pk=id)
     except Orders.DoesNotExist:
         return JsonResponse({"detail": "Order not found"}, status=404)
 
