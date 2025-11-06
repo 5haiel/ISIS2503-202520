@@ -8,9 +8,6 @@ class Orders(models.Model):
     cantidad = models.PositiveIntegerField()
     ubicacion = models.CharField(max_length=255)
     estado = models.CharField(max_length=255)
-    producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name="orders", db_column='producto_id')
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="orders", db_column='usuario_id')
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE, related_name="orders")
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="orders")
 
-class Meta:
-        db_table = 'ordenes'
-        managed  = False   
