@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.http import HttpResponse
 from django.urls import path, include
+from . import views
 
 def home(request):
     return HttpResponse("<h1>Bienvenido a la API de Provesi 🚀</h1><p>Visita <a href='/orders/'>/orders/</a> para ver las órdenes.</p>")
 
 urlpatterns = [
     path('', home),  # 👈 Página principal
+    path('health/', views.health_check, name = 'health'),
     path('orders/', include('orders.urls')),
 ]
