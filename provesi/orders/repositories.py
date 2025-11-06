@@ -1,11 +1,11 @@
 from .models import Orders
 from producto.models import Producto
 
-def get_order_with_product_and_location(order_id: int) -> dict:
+def get_order_with_product_and_location(id: int) -> dict:
     # Traer campos del pedido junto con producto y usuario
     order_qs = (
         Orders.objects
-        .filter(pk=order_id)
+        .filter(pk=id)
         .select_related("producto", "usuario")
         .values(
             "id", "cantidad", "ubicacion",
