@@ -10,8 +10,9 @@ class OrdersListView(generics.ListAPIView):
     queryset = Orders.objects.all()
     serializer_class = OrdersSerializer
 
-def order_detail_view(request, id: int):
-    data = get_order_with_product_and_location(id)
-    if data is None:
-        return JsonResponse({"detail": "Order not found"}, status=404)
-    return JsonResponse(data, status=200)
+def order_alistamiento_view(request, order_id):
+    data = get_order_with_product_and_location(order_id, request=request)
+    if not data:
+        raise Http404("Order not found")
+    return JsonResponse(data, safe=False)
+
