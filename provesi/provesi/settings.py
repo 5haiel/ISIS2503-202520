@@ -88,7 +88,7 @@ DATABASES = {
         "NAME": "monitoring_db",
         "USER": "monitoring_user",
         "PASSWORD": "isis2503",
-        "HOST": "54.146.211.62",   # o el host del contenedor/servicio
+        "HOST": "54.227.54.5",   # o el host del contenedor/servicio
         "PORT": "5432",
     }
 }
