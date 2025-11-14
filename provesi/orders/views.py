@@ -22,7 +22,7 @@ def orders_list_view(request):
     if role != "Operario de alistamiento":
         return render(request, "unauthorized.html", {"role": role}, status=403)
 
-    orders = Orders.objects.select_related("producto", "usuario").all()
+    orders = Orders.objects.select_related("producto", "usuario").order_by("id")
     return render(request, "orders_list.html", {"orders": orders})
 
 @login_required
@@ -41,7 +41,6 @@ def order_detail_view(request, id: int):
 
 
 def order_detail_view_api(request, id: int):
-    """Simple JSON-returning view for an order used by the basic API URL."""
     order = get_order_with_product_and_location(id)
     if not order:
         return JsonResponse({"detail": "Order not found"}, status=404)
