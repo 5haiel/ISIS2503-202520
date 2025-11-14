@@ -23,14 +23,6 @@ def orders_list_view(request):
     orders = Orders.objects.select_related("producto", "usuario").all()
     return render(request, "Orders/orders_list.html", {"orders": orders})
 
-
-# def order_detail_view(request, id: int):
-#     try:
-#         o = Orders.objects.get_order_with_product_and_location('producto','usuario').get(pk=id)
-#     except Orders.DoesNotExist:
-#         return JsonResponse({"detail": "Order not found"}, status=404)
-
-
 @login_required
 def order_detail_view(request, id: int):
     # same role restriction
@@ -44,3 +36,11 @@ def order_detail_view(request, id: int):
 
     # render a template with the normalized order dict
     return render(request, "Orders/order_detail.html", {"order": order})
+
+
+def order_detail_view_api(request, id: int):
+    """Simple JSON-returning view for an order used by the basic API URL."""
+    order = get_order_with_product_and_location(id)
+    if not order:
+        return JsonResponse({"detail": "Order not found"}, status=404)
+    return JsonResponse(order)
