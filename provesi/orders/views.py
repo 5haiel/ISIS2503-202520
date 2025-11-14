@@ -48,6 +48,18 @@ def order_detail_view_api(request, id: int):
 
 @login_required
 def update_quantity(request, order_id):
+    #solo Operario de alistamiento puede editar
+    role = getRole(request)
+    if role != "Operario de alistamiento":
+        # se bloquea el acceso
+        return render(
+            request,
+            "unauthorized.html",
+            {"role": role},
+            status=403,
+        )
+
+    # 2. caso rol correcto
     order = get_object_or_404(Orders, id=order_id)
     
     if request.method == "POST":
@@ -64,3 +76,4 @@ def update_quantity(request, order_id):
         return redirect("orders-list-ui")
 
     return render(request, "update_quantity.html", {"order": order})
+
