@@ -7,6 +7,8 @@ from .serializers import OrdersSerializer
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from provesi.auth0backend import getRole
+from django.shortcuts import get_object_or_404, redirect
+from django.http import HttpResponseForbidden
 # Create your views here.
 
 class OrdersListView(generics.ListAPIView):
@@ -44,3 +46,22 @@ def order_detail_view_api(request, id: int):
     if not order:
         return JsonResponse({"detail": "Order not found"}, status=404)
     return JsonResponse(order)
+
+@login_required
+def update_quantity(request, order_id):
+    order = get_object_or_404(Orders, id=order_id)
+    
+    if request.method == "POST":
+        nueva_cantidad = request.POST.get("cantidad")
+
+        try:
+            nueva_cantidad = int(nueva_cantidad)
+        except ValueError:
+            return HttpResponseForbidden("Cantidad inválida.")
+
+        order.cantidad = nueva_cantidad
+        order.save()
+
+        return redirect("orders-list-ui")
+
+    return render(request, "orders/update_quantity.html", {"order": order})

@@ -1,0 +1,9 @@
+<h1>Editar cantidad del pedido</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <label>Nueva cantidad:</label>
+  <input type="number" name="cantidad" value="{{ order.cantidad }}" required />
+  <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'orders-list-ui' %}">Volver a la lista de pedidos</a>

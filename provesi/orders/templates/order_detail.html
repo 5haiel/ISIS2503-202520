@@ -27,6 +27,10 @@
     <p><strong>SKU:</strong> {{ order.producto.sku }}</p>
   </div>
 
+  <a href="{% url 'edit_order' order.id %}" class="btn btn-warning">
+    Editar Cantidad
+  </a>
+  
   <!-- Optionally show usuario if available -->
   {% if order.usuario %}
   <h2>Usuario</h2>
