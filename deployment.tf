@@ -206,13 +206,13 @@ EOT
 # Salida. IPs públicas de las instancias de ORDEnes (servicios Django detrás del CB).
 output "ordenes_public_ips" {
   description = "Public IP addresses for the ordenes service instances"
-  value       = { for id, instance in aws_instance.ordenes : id => instance.public_ip }
+  value       = aws_instance.ordenes.public_ip
 }
 
 # Salida. IPs privadas de las instancias de ORDEnes.
 output "ordenes_private_ips" {
   description = "Private IP addresses for the ordenes service instances"
-  value       = { for id, instance in aws_instance.ordenes : id => instance.private_ip }
+  value       = aws_instance.ordenes.private_ip
 }
 
 # Salida. IP privada de la base de datos PostgreSQL.
