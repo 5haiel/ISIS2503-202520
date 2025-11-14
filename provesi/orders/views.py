@@ -9,9 +9,9 @@ from django.http import HttpResponse
 from provesi.auth0backend import getRole
 # Create your views here.
 
-# class OrdersListView(generics.ListAPIView):
-#     queryset = Orders.objects.all()
-#     serializer_class = OrdersSerializer
+class OrdersListView(generics.ListAPIView):
+    queryset = Orders.objects.all()
+    serializer_class = OrdersSerializer
 
 @login_required
 def orders_list_view(request):
