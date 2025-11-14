@@ -1,3 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Editar cantidad del pedido</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; }
+    .meta { margin-bottom: 1rem; }
+    .product { background:#f7f7f7; padding: 1rem; border-radius:6px; }
+    a { color: #2a7ae2; text-decoration: none; }
+  </style>
+</head>
+<body>
 <h1>Editar cantidad del pedido</h1>
 
 <form method="POST">
@@ -7,3 +20,5 @@
   <button type="submit">Guardar</button>
 </form>
 <a href="{% url 'orders-list-ui' %}">Volver a la lista de pedidos</a>
+</body>
+</html>

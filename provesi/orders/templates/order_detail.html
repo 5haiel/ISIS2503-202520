@@ -17,6 +17,9 @@
 
   <div class="meta">
     <p><strong>Cantidad:</strong> {{ order.cantidad }}</p>
+    <a href="{% url 'edit_order' order.id %}" class="btn btn-warning">
+    Editar Cantidad
+    </a>
     <p><strong>Ubicación:</strong> {{ order.ubicacion }}</p>
   </div>
 
@@ -26,10 +29,6 @@
     <p><strong>Nombre:</strong> {{ order.producto.nombre }}</p>
     <p><strong>SKU:</strong> {{ order.producto.sku }}</p>
   </div>
-
-  <a href="{% url 'edit_order' order.id %}" class="btn btn-warning">
-    Editar Cantidad
-  </a>
   
   <!-- Optionally show usuario if available -->
   {% if order.usuario %}
