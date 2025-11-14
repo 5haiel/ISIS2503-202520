@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = "Import orders from CSV"
 
     def handle(self, *args, **kwargs):
-        path = "provesi/datos/ordenes.csv"
+        path = "datos/ordenes.csv"
 
         with open(path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
