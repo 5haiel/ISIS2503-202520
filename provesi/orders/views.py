@@ -64,4 +64,4 @@ def update_quantity(request, order_id):
 
         return redirect("orders-list-ui")
 
-    return render(request, "orders/update_quantity.html", {"order": order})
+    return render(request, "update_quantity.html", {"order": order})
