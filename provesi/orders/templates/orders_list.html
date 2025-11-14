@@ -11,6 +11,20 @@
   </style>
 </head>
 <body>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+  {% if user.is_authenticated %}
+      <span style="margin-right: 10px;">Logged in as: <strong>{{ user.username }}</strong></span>
+      <form action="{% url 'logout' %}" method="post" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" style="background:none;border:none;color:#2a7ae2;cursor:pointer;">
+              Logout
+          </button>
+      </form>
+  {% else %}
+      <a href="/login/auth0">Login</a>
+  {% endif %}
+</div>
+
   <h1>Orders</h1>
   <table>
     <thead>
