@@ -6,14 +6,13 @@
 #
 # Elementos a desplegar en AWS:
 # 1. Grupos de seguridad:
-#    - cbd-traffic-django (puerto 8080)
-#    - cbd-traffic-db (puerto 5432)
-#    - cbd-traffic-ssh (puerto 22)
+#    - traffic-django (puerto 8080)
+#    - traffic-db (puerto 5432)
+#    - traffic-ssh (puerto 22)
 #
 # 2. Instancias EC2:
-#    - cbd-db (PostgreSQL instalado y configurado)
-#    - cbd-monitoring (Monitoring app instalada y migraciones aplicadas)
-#    - cbd-alarms-a (Monitoring app instalada)
+#    - provesi-db (PostgreSQL instalado y configurado)
+#    - provesi-ordenes (Monitoring app instalada y migraciones aplicadas)
 # ******************************************************************
 
 # Variable. Define la región de AWS donde se desplegará la infraestructura.
@@ -162,7 +161,6 @@ resource "aws_instance" "database" {
 }
 
 # Recurso. Define las instancias EC2 para el servicio de ordenes de la aplicación de Provesi.
-# Se crean tres instancias (a, b, c) usando un bucle.
 # Cada instancia incluye un script de creación para instalar la aplicación de Provesi.
 resource "aws_instance" "ordenes" {
   ami                         = data.aws_ami.ubuntu.id
@@ -203,13 +201,13 @@ EOT
   })
 }
 
-# Salida. IPs públicas de las instancias de ORDEnes (servicios Django detrás del CB).
+# Salida. IPs públicas de las instancias de ordenes.
 output "ordenes_public_ips" {
   description = "Public IP addresses for the ordenes service instances"
   value       = aws_instance.ordenes.public_ip
 }
 
-# Salida. IPs privadas de las instancias de ORDEnes.
+# Salida. IPs privadas de las instancias de ordenes.
 output "ordenes_private_ips" {
   description = "Private IP addresses for the ordenes service instances"
   value       = aws_instance.ordenes.private_ip
@@ -221,8 +219,7 @@ output "database_private_ip" {
   value       = aws_instance.database.private_ip
 }
 
-# (Opcional) IP pública de la base de datos si la dejaste con public IP.
-# Útil para debug, no recomendado en prod.
+# Salida. IP Publica de la base de datos PostgreSQL
 output "database_public_ip" {
   description = "Public IP address for the PostgreSQL database instance"
   value       = aws_instance.database.public_ip
