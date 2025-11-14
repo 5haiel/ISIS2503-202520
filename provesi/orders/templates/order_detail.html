@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Order {{ order.id }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; }
+    .meta { margin-bottom: 1rem; }
+    .product { background:#f7f7f7; padding: 1rem; border-radius:6px; }
+    a { color: #2a7ae2; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a href="{% url 'orders-list-ui' %}">&larr; Back to orders</a>
+
+  <h1>Order #{{ order.id }}</h1>
+
+  <div class="meta">
+    <p><strong>Cantidad:</strong> {{ order.cantidad }}</p>
+    <p><strong>Ubicación:</strong> {{ order.ubicacion }}</p>
+  </div>
+
+  <h2>Producto</h2>
+  <div class="product">
+    <p><strong>ID:</strong> {{ order.producto.id }}</p>
+    <p><strong>Nombre:</strong> {{ order.producto.nombre }}</p>
+    <p><strong>SKU:</strong> {{ order.producto.sku }}</p>
+  </div>
+
+  <!-- Optionally show usuario if available -->
+  {% if order.usuario %}
+  <h2>Usuario</h2>
+  <p>{{ order.usuario }}</p>
+  {% endif %}
+</body>
+</html>

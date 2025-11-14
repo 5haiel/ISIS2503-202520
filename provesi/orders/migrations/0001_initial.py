@@ -9,8 +9,9 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('producto', '0001_initial'),
-    ]
+    ('producto', '0001_initial'),
+    ('users', '0001_initial'),
+]
 
     operations = [
         migrations.CreateModel(
@@ -19,7 +20,9 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('cantidad', models.PositiveIntegerField()),
                 ('ubicacion', models.CharField(max_length=255)),
+                ('estado', models.CharField(max_length=50, default='pendiente')),
                 ('producto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='producto.producto')),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='orders', to='users.Usuario')),
             ],
         ),
     ]

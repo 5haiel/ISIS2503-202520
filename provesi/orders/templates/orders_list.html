@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Orders</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding: .5rem; border-bottom: 1px solid #eee; text-align:left; }
+    a { color:#2a7ae2; text-decoration: none; }
+  </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+  {% if user.is_authenticated %}
+      <span style="margin-right: 10px;">Logged in as: <strong>{{ user.username }}</strong></span>
+      <form action="{% url 'logout' %}" method="post" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" style="background:none;border:none;color:#2a7ae2;cursor:pointer;">
+              Logout
+          </button>
+      </form>
+  {% else %}
+      <a href="/login/auth0">Login</a>
+  {% endif %}
+</div>
+
+  <h1>Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cantidad</th>
+        <th>Ubicación</th>
+        <th>Producto</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for o in orders %}
+      <tr>
+        <td>{{ o.id }}</td>
+        <td>{{ o.cantidad }}</td>
+        <td>{{ o.ubicacion }}</td>
+        <td>
+          {% if o.producto %}
+            {{ o.producto.nombre|default:o.producto }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+        <td><a href="{% url 'order-detail-ui' o.id %}">Ver</a></td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5">No orders found</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

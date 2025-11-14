@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7i4rz(%*e4!5mt3$&)^9z=+x91$rjmv8s9q(4*%0&aw#tpo$qd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,17 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'users',
     'locations',
-    'producto',
-    'catalog',
     'inventory',
-    'orders',
-    'shipping',
-    'payment',
     'experiment',
-    'wms_op',
-    'rest_framework',
+    'producto',
+    'orders',
+    'social_django',
 ] 
 
 MIDDLEWARE = [
@@ -66,8 +63,8 @@ ROOT_URLCONF = 'provesi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],              
+        'APP_DIRS': True, 
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -79,22 +76,25 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'provesi.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# settings.py
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'monitoring_db',
-        'USER': 'monitoring_user',
-        'PASSWORD': 'isis2503',
-        'HOST': '172.31.27.55',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "monitoring_db",
+        "USER": "monitoring_user",
+        "PASSWORD": "isis2503",
+        "HOST": "54.221.1.33",   # o el host del contenedor/servicio
+        "PORT": "5432",
     }
 }
+
 
 
 # Password validation
@@ -140,18 +140,16 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://master.redistest-001.ijrbwf.use1.cache.amazonaws.com:6379",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        },
-        "TIMEOUT": 60 * 5,
-    }
-}
+LOGIN_URL = "/login/auth0" 
+LOGIN_REDIRECT_URL = "/" 
+LOGOUT_REDIRECT_URL = "https://dev-my7jh7d04q10jkt6.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F3.92.27.87:8080" 
+SOCIAL_AUTH_TRAILING_SLASH = False # Remove end slash from routes 
+SOCIAL_AUTH_AUTH0_DOMAIN = 'dev-my7jh7d04q10jkt6.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = '3tpBWADn2Tjg9mkFXDHRfdA3QVDOQQDW' 
+SOCIAL_AUTH_AUTH0_SECRET = '2AGwQb9cDPsnu4ILdklzwJxGDIgCZxcVcPhTfjwoN_a0zDA9_QkwR5rC1VA8f6wD' 
+SOCIAL_AUTH_AUTH0_SCOPE = [ 'openid', 'profile',
 
-# TTL configurables
-CACHE_DEFAULT_TTL = 60 * 5
-CACHE_SHORT_TTL = 60
-CACHE_LONG_TTL = 60 * 60 * 24
+'email',
+
+'role', ] 
+AUTHENTICATION_BACKENDS = { 'provesi.auth0backend.Auth0', 'django.contrib.auth.backends.ModelBackend', }
