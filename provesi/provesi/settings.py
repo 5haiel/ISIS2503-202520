@@ -151,4 +151,4 @@ SOCIAL_AUTH_AUTH0_SCOPE = [ 'openid', 'profile',
 'email',
 
 'role', ] 
-AUTHENTICATION_BACKENDS = { 'monitoring.auth0backend.Auth0', 'django.contrib.auth.backends.ModelBackend', }
+AUTHENTICATION_BACKENDS = { 'provesi.auth0backend.Auth0', 'django.contrib.auth.backends.ModelBackend', }
