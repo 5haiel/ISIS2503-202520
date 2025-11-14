@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = "Import usuarios from CSV"
 
     def handle(self, *args, **kwargs):
-        path = "provesi/datos/usuarios.csv"  # adjust if needed
+        path = "datos/usuarios.csv"  # adjust if needed
 
         with open(path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
