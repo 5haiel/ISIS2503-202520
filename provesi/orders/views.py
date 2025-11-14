@@ -21,7 +21,7 @@ def orders_list_view(request):
         return HttpResponse("Unauthorized User", status=403)
 
     orders = Orders.objects.select_related("producto", "usuario").all()
-    return render(request, "Orders/orders_list.html", {"orders": orders})
+    return render(request, "templates/orders_list.html", {"orders": orders})
 
 @login_required
 def order_detail_view(request, id: int):
@@ -35,7 +35,7 @@ def order_detail_view(request, id: int):
         return JsonResponse({"detail": "Order not found"}, status=404)
 
     # render a template with the normalized order dict
-    return render(request, "Orders/order_detail.html", {"order": order})
+    return render(request, "templates/order_detail.html", {"order": order})
 
 
 def order_detail_view_api(request, id: int):
