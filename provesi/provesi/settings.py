@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'experiment',
     'producto',
     'orders',
+    'social_django',
 ] 
 
 MIDDLEWARE = [
