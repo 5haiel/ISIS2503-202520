@@ -18,7 +18,7 @@ def orders_list_view(request):
     # permit only Operario de alistamiento
     role = getRole(request)
     if role != "Operario de alistamiento":
-        return HttpResponse("Unauthorized User", status=403)
+        return render(request, "unauthorized.html", {"role": role}, status=403)
 
     orders = Orders.objects.select_related("producto", "usuario").all()
     return render(request, "orders_list.html", {"orders": orders})
@@ -28,7 +28,7 @@ def order_detail_view(request, id: int):
     # same role restriction
     role = getRole(request)
     if role != "Operario de alistamiento":
-        return HttpResponse("Unauthorized User", status=403)
+        return render(request, "unauthorized.html", {"role": role}, status=403)
 
     order = get_order_with_product_and_location(id)
     if not order:
