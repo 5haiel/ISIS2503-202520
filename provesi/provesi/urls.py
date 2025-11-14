@@ -24,4 +24,6 @@ urlpatterns = [
     path('', home),  # 👈 Página principal
     path('health/', views.health_check, name = 'health'),
     path('orders/', include('orders.urls')),
+    path(r'', include('django.contrib.auth.urls')),
+    path(r'', include('social_django.urls')),
 ]
