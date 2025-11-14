@@ -6,7 +6,7 @@ from .models import Orders
 from .serializers import OrdersSerializer
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from provesi.auth0backend import get_role
+from provesi.auth0backend import getRole
 # Create your views here.
 
 # class OrdersListView(generics.ListAPIView):
@@ -16,7 +16,7 @@ from provesi.auth0backend import get_role
 @login_required
 def orders_list_view(request):
     # permit only Operario de alistamiento
-    role = get_role(request)
+    role = getRole(request)
     if role != "Operario de alistamiento":
         return HttpResponse("Unauthorized User", status=403)
 
@@ -34,7 +34,7 @@ def orders_list_view(request):
 @login_required
 def order_detail_view(request, id: int):
     # same role restriction
-    role = get_role(request)
+    role = getRole(request)
     if role != "Operario de alistamiento":
         return HttpResponse("Unauthorized User", status=403)
 
