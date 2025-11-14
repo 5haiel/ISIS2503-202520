@@ -7,17 +7,13 @@
 # Elementos a desplegar en AWS:
 # 1. Grupos de seguridad:
 #    - cbd-traffic-django (puerto 8080)
-#    - cbd-traffic-cb (puertos 8000 y 8001)
 #    - cbd-traffic-db (puerto 5432)
 #    - cbd-traffic-ssh (puerto 22)
 #
 # 2. Instancias EC2:
-#    - cbd-kong
 #    - cbd-db (PostgreSQL instalado y configurado)
 #    - cbd-monitoring (Monitoring app instalada y migraciones aplicadas)
 #    - cbd-alarms-a (Monitoring app instalada)
-#    - cbd-alarms-b (Monitoring app instalada)
-#    - cbd-alarms-c (Monitoring app instalada)
 # ******************************************************************
 
 # Variable. Define la región de AWS donde se desplegará la infraestructura.
@@ -50,7 +46,7 @@ provider "aws" {
 locals {
   project_name = "${var.project_prefix}-circuit-breaker"
   repository   = "https://github.com/5haiel/ISIS2503-202520.git"
-  branch       = "Mariana"
+  branch       = "confidencialidadTest"
 
   common_tags = {
     Project   = local.project_name
@@ -90,24 +86,6 @@ resource "aws_security_group" "traffic_django" {
     tags = merge(local.common_tags, {
         Name = "${var.project_prefix}-traffic-services"
     })
-}
-
-# Recurso. Define el grupo de seguridad para el tráfico del Circuit Breaker (8000, 8001).
-resource "aws_security_group" "traffic_cb" {
-  name        = "${var.project_prefix}-traffic-cb"
-  description = "Expose Kong circuit breaker ports"
-
-  ingress {
-    description = "Kong traffic"
-    from_port   = 8000
-    to_port     = 8001
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = merge(local.common_tags, {
-    Name = "${var.project_prefix}-traffic-cb"
-  })
 }
 
 # Recurso. Define el grupo de seguridad para el tráfico de la base de datos (5432).
@@ -154,20 +132,6 @@ resource "aws_security_group" "traffic_ssh" {
   })
 }
 
-# Recurso. Define la instancia EC2 para Kong (Circuit Breaker).
-# Esta instancia se crea planamente sin configuración adicional.
-resource "aws_instance" "kong" {
-  ami                         = data.aws_ami.ubuntu.id
-  instance_type               = var.instance_type
-  associate_public_ip_address = true
-  vpc_security_group_ids      = [aws_security_group.traffic_cb.id, aws_security_group.traffic_ssh.id]
-
-  tags = merge(local.common_tags, {
-    Name = "${var.project_prefix}-kong"
-    Role = "circuit-breaker"
-  })
-}
-
 # Recurso. Define la instancia EC2 para la base de datos PostgreSQL.
 # Esta instancia incluye un script de creación para instalar y configurar PostgreSQL.
 # El script crea un usuario y una base de datos, y ajusta la configuración para permitir conexiones remotas.
@@ -201,8 +165,6 @@ resource "aws_instance" "database" {
 # Se crean tres instancias (a, b, c) usando un bucle.
 # Cada instancia incluye un script de creación para instalar la aplicación de Provesi.
 resource "aws_instance" "ordenes" {
-  for_each = toset(["a", "b", "c", "d"])
-
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
   associate_public_ip_address = true
@@ -236,15 +198,9 @@ resource "aws_instance" "ordenes" {
 EOT
 
   tags = merge(local.common_tags, {
-    Name = "${var.project_prefix}-ordenes-${each.key}"
+    Name = "${var.project_prefix}-ordenes"
     Role = "ordenes"
   })
-}
-
-# Salida. IP pública de la instancia de Kong (Circuit Breaker).
-output "kong_public_ip" {
-  description = "Public IP address for the Kong circuit breaker instance"
-  value       = aws_instance.kong.public_ip
 }
 
 # Salida. IPs públicas de las instancias de ORDEnes (servicios Django detrás del CB).
