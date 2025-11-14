@@ -1,0 +1,100 @@
+id,producto,producto_nombre,cantidad,ubicacion
+1,36,Depósito,6
+2,7,Depósito,7
+3,42,Bodega C,4
+4,23,Depósito,6
+5,21,Estante 1,8
+6,28,Bodega B,6
+7,48,Estante 1,5
+8,18,Estante 2,4
+9,39,Bodega B,6
+10,11,Estante 2,7
+11,4,Bodega A,5
+12,10,Estante 1,7
+13,16,Estante 1,4
+14,45,Depósito,7
+15,33,Estante 2,7
+16,35,Bodega A,5
+17,39,Depósito,6
+18,17,Depósito,5
+19,30,Bodega A,4
+20,21,Depósito,5
+21,46,Depósito,5
+22,48,Estante 1,8
+23,23,Estante 1,6
+24,32,Bodega C,8
+25,20,Bodega A,4
+26,28,Bodega C,6
+27,13,Estante 1,7
+28,31,Bodega A,7
+29,37,Bodega C,7
+30,43,Bodega A,4
+31,48,Bodega C,5
+32,40,Estante 2,4
+33,25,Bodega B,5
+34,34,Bodega A,7
+35,18,Estante 2,4
+36,30,Depósito,4
+37,41,Estante 2,5
+38,20,Bodega C,5
+39,33,Depósito,5
+40,47,Bodega B,4
+41,13,Bodega B,4
+42,22,Estante 2,7
+43,13,Depósito,6
+44,15,Bodega B,4
+45,12,Bodega C,4
+46,45,Depósito,5
+47,35,Bodega B,6
+48,41,Estante 2,7
+49,24,Estante 2,8
+50,38,Estante 2,7
+51,2,Estante 1,8
+52,34,Bodega C,4
+53,33,Bodega B,7
+54,36,Estante 2,5
+55,24,Estante 2,5
+56,5,Estante 1,7
+57,9,Bodega B,6
+58,7,Bodega B,6
+59,16,Bodega C,7
+60,11,Estante 1,4
+61,39,Bodega B,4
+62,6,Estante 2,6
+63,11,Estante 1,8
+64,39,Bodega A,4
+65,44,Bodega A,7
+66,9,Bodega A,7
+67,48,Bodega A,8
+68,15,Estante 2,7
+69,1,Bodega C,8
+70,36,Estante 1,8
+71,5,Bodega A,8
+72,23,Depósito,7
+73,43,Bodega A,5
+74,19,Depósito,8
+75,19,Depósito,7
+76,47,Bodega A,6
+77,46,Depósito,7
+78,37,Estante 1,6
+79,2,Estante 2,7
+80,13,Depósito,7
+81,5,Bodega C,6
+82,24,Bodega B,6
+83,29,Bodega B,6
+84,35,Estante 1,7
+85,11,Bodega B,4
+86,48,Bodega B,5
+87,10,Bodega C,6
+88,48,Estante 1,7
+89,36,Estante 1,4
+90,3,Estante 1,8
+91,45,Estante 1,7
+92,18,Estante 2,6
+93,19,Estante 2,7
+94,30,Bodega A,8
+95,32,Estante 2,6
+96,10,Depósito,6
+97,16,Bodega B,6
+98,24,Estante 1,7
+99,40,Bodega C,7

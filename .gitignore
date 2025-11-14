@@ -416,3 +416,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+awscliv2.zip
+aws/
+*aws
+aws.zip
