@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = "Import productos from CSV"
 
     def handle(self, *args, **kwargs):
-        path = "datos/productos.csv"
+        path = "datos/productos_provesi.csv"
 
         with open(path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
